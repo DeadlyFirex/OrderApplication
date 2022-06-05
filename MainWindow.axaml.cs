@@ -1,12 +1,11 @@
 using Avalonia.Controls;
 
-namespace OrderApplication
+namespace OrderApplication;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
     }
 }

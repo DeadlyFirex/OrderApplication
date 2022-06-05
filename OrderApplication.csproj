@@ -8,20 +8,47 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
     </PropertyGroup>
     <ItemGroup>
-        <None Remove=".gitignore"/>
+        <None Remove=".gitignore" />
+        <None Remove="OrderApplication.sln.DotSettings" />
     </ItemGroup>
     <ItemGroup>
         <!--This helps with theme dll-s trimming.
         If you will publish your application in self-contained mode with p:PublishTrimmed=true and it will use Fluent theme Default theme will be trimmed from the output and vice versa.
         https://github.com/AvaloniaUI/Avalonia/issues/5593 -->
-        <TrimmableAssembly Include="Avalonia.Themes.Fluent"/>
-        <TrimmableAssembly Include="Avalonia.Themes.Default"/>
+        <TrimmableAssembly Include="Avalonia.Themes.Fluent" />
+        <TrimmableAssembly Include="Avalonia.Themes.Default" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="0.10.14"/>
-        <PackageReference Include="Avalonia.Desktop" Version="0.10.14"/>
+        <PackageReference Include="Avalonia" Version="0.10.14" />
+        <PackageReference Include="Avalonia.Desktop" Version="0.10.14" />
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.14"/>
-        <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4"/>
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.14" />
+        <PackageReference Include="Material.Avalonia" Version="2.5.1" />
+        <PackageReference Include="Material.Icons.Avalonia" Version="1.0.2" />
+        <PackageReference Include="XamlNameReferenceGenerator" Version="1.3.4" />
+    </ItemGroup>
+    <ItemGroup>
+      <EmbeddedResource Update="Assets\resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+      <Compile Update="Assets\resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Resources\icon.png" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Resources\icon.ico" />
+      <AvaloniaResource Include="Resources\icon.ico" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Services" />
+      <Folder Include="Utilities" />
     </ItemGroup>
 </Project>

@@ -4,6 +4,70 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="OrderApplication.MainWindow"
-        Title="OrderApplication">
-    Welcome to Avalonia!
+        Title="OrderApplication"
+        Icon="/Resources/icon.ico"
+        WindowStartupLocation="CenterScreen"
+        Background="Transparent"
+        TransparencyLevelHint="AcrylicBlur"
+        ExtendClientAreaToDecorationsHint="True">
+
+    <DockPanel>
+        <ExperimentalAcrylicBorder IsHitTestVisible="False">
+            <ExperimentalAcrylicBorder.Material>
+                <ExperimentalAcrylicMaterial
+                    BackgroundSource="Digger"
+                    TintColor="Black"
+                    TintOpacity="1"
+                    MaterialOpacity="0.65" />
+            </ExperimentalAcrylicBorder.Material>
+        </ExperimentalAcrylicBorder>
+
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Settings..." />
+                <Separator />
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Header="Undo" />
+                <MenuItem Header="Redo" />
+                <Separator/>
+                <MenuItem Header="Copy" />
+                <MenuItem Header="Paste" />
+            </MenuItem>
+            <MenuItem Header="_View" >
+                <MenuItem Header="Fullscreen" />
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="Open Console" />
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="Check for updates" />
+                <Separator/>
+                <MenuItem Header="About" />
+            </MenuItem>
+        </Menu>
+        
+        <TabControl>
+            <TabItem Header="Dashboard" VerticalContentAlignment="Center">
+                <Canvas>
+                    <TextBlock Text="I am in the circle page !" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                </Canvas>
+            </TabItem>
+            <TabItem Header="Order" VerticalContentAlignment="Center">
+                <StackPanel>
+                    <TextBlock
+                        Text="I am in the triangle page ! I'll put a button to show you that each page contains what you want."
+                        HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <Button>A button in the triangle page !</Button>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Events" VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Square : " HorizontalAlignment="Left" VerticalAlignment="Center" />
+                    <Rectangle Fill="Blue" Width="63" Height="41" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>
