@@ -49,12 +49,12 @@
         </Menu>
         
         <TabControl>
-            <TabItem Header="Dashboard" VerticalContentAlignment="Center">
+            <TabItem Header="Dashboard" VerticalContentAlignment="Center" FontSize="20">
                 <Canvas>
                     <TextBlock Text="I am in the circle page !" HorizontalAlignment="Left" VerticalAlignment="Center" />
                 </Canvas>
             </TabItem>
-            <TabItem Header="Order" VerticalContentAlignment="Center">
+            <TabItem Header="Order" VerticalContentAlignment="Center" FontSize="20" >
                 <StackPanel>
                     <TextBlock
                         Text="I am in the triangle page ! I'll put a button to show you that each page contains what you want."
@@ -62,7 +62,7 @@
                     <Button>A button in the triangle page !</Button>
                 </StackPanel>
             </TabItem>
-            <TabItem Header="Events" VerticalAlignment="Center">
+            <TabItem Header="Events" VerticalAlignment="Center" FontSize="20" >
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="Square : " HorizontalAlignment="Left" VerticalAlignment="Center" />
                     <Rectangle Fill="Blue" Width="63" Height="41" />
