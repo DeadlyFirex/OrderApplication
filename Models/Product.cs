@@ -1,83 +1,83 @@
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 #pragma warning disable CS8618
 
 namespace OrderApplication.Models;
 
 public class Product
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public int Id { get; set; }
     
-    [JsonProperty("uuid")]
+    [JsonPropertyName("uuid")]
     public string Uuid { get; set; }
     
-    [JsonProperty("name")]
+    [JsonPropertyName("name")]
     public string Name { get; set; }
     
-    [JsonProperty("brand")]
+    [JsonPropertyName("brand")]
     public string Brand { get; set; }
     
-    [JsonProperty("price")]
+    [JsonPropertyName("price")]
     public double Price { get; set; }
     
     
-    [JsonProperty("category")]
+    [JsonPropertyName("category")]
     public string Category { get; set; }
     
-    [JsonProperty("description")]
+    [JsonPropertyName("description")]
     public string Description { get; set; }
     
-    [JsonProperty("image")]
+    [JsonPropertyName("image")]
     public dynamic? Image { get; set; }
     
-    [JsonProperty("image_path")]
+    [JsonPropertyName("image_path")]
     public string ImagePath { get; set; }
     
-    [JsonProperty("original_link")]
+    [JsonPropertyName("original_link")]
     public string Link { get; set; }
     
     
-    [JsonProperty("nutri_score")]
+    [JsonPropertyName("nutri_score")]
     public string NutriScore { get; set; }
     
-    [JsonProperty("quantity")]
+    [JsonPropertyName("quantity")]
     public string Quantity { get; set; }
     
-    [JsonProperty("allergens")]
+    [JsonPropertyName("allergens")]
     public List<string> Allergens { get; set; }
     
-    [JsonProperty("ingredients")]
+    [JsonPropertyName("ingredients")]
     public List<string> Ingredients { get; set; }
     
     
-    [JsonProperty("energy")]
+    [JsonPropertyName("energy")]
     public double Energy { get; set; }
     
-    [JsonProperty("fat")]
+    [JsonPropertyName("fat")]
     public double Fat { get; set; }
     
-    [JsonProperty("saturated_fat")]
+    [JsonPropertyName("saturated_fat")]
     public double SaturatedFat { get; set; }
     
-    [JsonProperty("unsaturated_fat")]
+    [JsonPropertyName("unsaturated_fat")]
     public double UnsaturatedFat { get; set; }
     
-    [JsonProperty("carbohydrates")]
+    [JsonPropertyName("carbohydrates")]
     public double Carbohydrates { get; set; }
     
-    [JsonProperty("sugars")]
+    [JsonPropertyName("sugars")]
     public double Sugars { get; set; }
     
-    [JsonProperty("fiber")]
+    [JsonPropertyName("fiber")]
     public double Fiber { get; set; }
     
-    [JsonProperty("proteins")]
+    [JsonPropertyName("proteins")]
     public double Proteins { get; set; }
     
-    [JsonProperty("salt")]
+    [JsonPropertyName("salt")]
     public double Salt { get; set; }
 
-    [JsonProperty("extra")]
+    [JsonPropertyName("extra")]
     public List<Dictionary<string, double>> Extra { get; set; }
 }

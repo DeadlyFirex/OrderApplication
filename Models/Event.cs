@@ -1,31 +1,32 @@
 using System;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
+
 #pragma warning disable CS8618
 
 namespace OrderApplication.Models;
 
 public class Event
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public int Id { get; set; }
     
-    [JsonProperty("uuid")]
+    [JsonPropertyName("uuid")]
     public string Uuid { get; set; }
     
 
-    [JsonProperty("active")]
+    [JsonPropertyName("active")]
     public bool Active { get; set; }
     
-    [JsonProperty("created_at")]
+    [JsonPropertyName("created_at")]
     public DateTime CreatedAt { get; set; }
     
-    [JsonProperty("until")]
+    [JsonPropertyName("until")]
     public DateTime Until { get; set; }
     
-    [JsonProperty("deadline")]
+    [JsonPropertyName("deadline")]
     public DateTime Deadline { get; set; }
     
     
-    [JsonProperty("max_order_price")]
+    [JsonPropertyName("max_order_price")]
     public double MaxOrderPrice { get; set; }
 }

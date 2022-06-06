@@ -1,44 +1,44 @@
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 #pragma warning disable CS8618
 
 namespace OrderApplication.Models;
 
 internal class Order
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public int Id { get; set; }
     
-    [JsonProperty("uuid")]
+    [JsonPropertyName("uuid")]
     public string Uuid { get; set; }
     
     
-    [JsonProperty("products")]
+    [JsonPropertyName("products")]
     public List<string> Products { get; set; }
     
-    [JsonProperty("total_price")]
+    [JsonPropertyName("total_price")]
     public double TotalPrice { get; set; }
     
-    [JsonProperty("notes")]
+    [JsonPropertyName("notes")]
     public string Notes { get; set; }
     
-    [JsonProperty("employee_notes")]
+    [JsonPropertyName("employee_notes")]
     public string EmployeeNotes { get; set; }
     
     
-    [JsonProperty("event")]
+    [JsonPropertyName("event")]
     public string Event { get; set; }
     
-    [JsonProperty("created_at")]
+    [JsonPropertyName("created_at")]
     public DateTime CreatedAt { get; set; }
     
-    [JsonProperty("last_changed_at")]
+    [JsonPropertyName("last_changed_at")]
     public DateTime LastChangedAt { get; set; }
     
-    [JsonProperty("expired")]
+    [JsonPropertyName("expired")]
     public bool Expired { get; set; }
     
-    [JsonProperty("completed")]
+    [JsonPropertyName("completed")]
     public bool Completed { get; set; }
 }

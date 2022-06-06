@@ -1,80 +1,80 @@
 using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 #pragma warning disable CS8618
 
 namespace OrderApplication.Models;
 
 public class User
 {
-    [JsonProperty("id")]
+    [JsonPropertyName("id")]
     public int Id { get; set; }
     
-    [JsonProperty("uuid")]
+    [JsonPropertyName("uuid")]
     public string Uuid { get; set; }
     
-    [JsonProperty("username")]
+    [JsonPropertyName("username")]
     public string Username { get; set; }
     
-    [JsonProperty("name")]
+    [JsonPropertyName("name")]
     public string Name { get; set; }
     
-    [JsonProperty("email")]
+    [JsonPropertyName("email")]
     public string Email { get; set; }
     
-    [JsonProperty("phone_number")]
+    [JsonPropertyName("phone_number")]
     public string PhoneNumber { get; set; }
     
-    [JsonProperty("address")]
+    [JsonPropertyName("address")]
     public string Address { get; set; }
     
-    [JsonProperty("postal_code")]
+    [JsonPropertyName("postal_code")]
     public string PostalCode { get; set; }
     
-    [JsonProperty("created_at")]
+    [JsonPropertyName("created_at")]
     public DateTime CreatedAt { get; set; }
     
-    [JsonProperty("country")]
+    [JsonPropertyName("country")]
     public string Country { get; set; }
     
     
-    [JsonProperty("flags")]
+    [JsonPropertyName("flags")]
     public List<string> Flags { get; set; }
     
-    [JsonProperty("admin")]
+    [JsonPropertyName("admin")]
     public bool Admin { get; set; }
     
-    [JsonProperty("password")]
+    [JsonPropertyName("password")]
     public string Password { get; set; }
     
-    [JsonProperty("secret")]
+    [JsonPropertyName("secret")]
     public string Secret { get; set; }
     
-    [JsonProperty("token")]
+    [JsonPropertyName("token")]
     public string Token { get; set; }
     
-    [JsonProperty("tags")]
+    [JsonPropertyName("tags")]
     public List<string> Tags { get; set; }
     
     
-    [JsonProperty("active")]
+    [JsonPropertyName("active")]
     public bool Active { get; set; }
     
-    [JsonProperty("last_action_at")]
+    [JsonPropertyName("last_action_at")]
     public DateTime LastActionAt { get; set; }
     
-    [JsonProperty("last_action_ip")]
+    [JsonPropertyName("last_action_ip")]
     public string LastActionIp { get; set; }
     
-    [JsonProperty("last_action")]
+    [JsonPropertyName("last_action")]
     public string LastAction { get; set; }
     
-    [JsonProperty("last_login_at")]
+    [JsonPropertyName("last_login_at")]
     public DateTime LastLoginAt { get; set; }
     
-    [JsonProperty("last_login_ip")]
+    [JsonPropertyName("last_login_ip")]
     public string LastLoginIp { get; set; }
     
-    [JsonProperty("login_count")]
+    [JsonPropertyName("login_count")]
     public int LoginCount { get; set; }
 }

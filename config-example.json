@@ -1,0 +1,10 @@
+{
+  "config": {
+    "server": {
+      "url": "http://localhost",
+      "port": 5000,
+      "version": "/v1",
+      "secure": false
+    }
+  }
+}
