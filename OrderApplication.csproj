@@ -10,6 +10,7 @@
     <ItemGroup>
         <None Remove=".gitignore" />
         <None Remove="OrderApplication.sln.DotSettings" />
+        <None Remove="licenses\**" />
     </ItemGroup>
     <ItemGroup>
         <!--This helps with theme dll-s trimming.
@@ -33,6 +34,7 @@
         <Generator>ResXFileCodeGenerator</Generator>
         <LastGenOutput>resources.Designer.cs</LastGenOutput>
       </EmbeddedResource>
+      <EmbeddedResource Remove="licenses\**" />
     </ItemGroup>
     <ItemGroup>
       <Compile Update="Assets\resources.Designer.cs">
@@ -40,6 +42,7 @@
         <AutoGen>True</AutoGen>
         <DependentUpon>resources.resx</DependentUpon>
       </Compile>
+      <Compile Remove="licenses\**" />
     </ItemGroup>
     <ItemGroup>
       <None Remove="Resources\icon.png" />
@@ -49,6 +52,6 @@
       <AvaloniaResource Include="Resources\icon.ico" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Utilities" />
+      <AvaloniaXaml Remove="licenses\**" />
     </ItemGroup>
 </Project>

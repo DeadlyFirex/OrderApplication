@@ -42,7 +42,7 @@
                 <MenuItem Header="Open Console" />
             </MenuItem>
             <MenuItem Header="_Help">
-                <MenuItem Header="Check for updates" />
+                <MenuItem Header="Check for updates"/>
                 <Separator/>
                 <MenuItem Header="About" />
             </MenuItem>
@@ -57,9 +57,9 @@
             <TabItem Header="Order" VerticalContentAlignment="Center" FontSize="20" >
                 <StackPanel>
                     <TextBlock
-                        Text="I am in the triangle page ! I'll put a button to show you that each page contains what you want."
+                        Text="This is an ambigious result." Name="TextBlock"
                         HorizontalAlignment="Left" VerticalAlignment="Center" />
-                    <Button>A button in the triangle page !</Button>
+                    <Button Content="Fetch UUID" Click="Button_OnClick"></Button>
                 </StackPanel>
             </TabItem>
             <TabItem Header="Events" VerticalAlignment="Center" FontSize="20" >

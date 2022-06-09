@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
@@ -28,4 +29,25 @@ internal sealed class VersionResponse : BaseResponse
 internal sealed class LastChangedResponse : BaseResponse
 {
     [JsonPropertyName("result")] public List<Data> result { get; set; }
+}
+
+internal sealed class AuthCheckResponse : BaseResponse
+{
+    [JsonPropertyName("login")] public LoginCheckData result { get; set; }
+
+    internal sealed class LoginCheckData
+    {
+        [JsonPropertyName("uuid")] public string Uuid { get; set; }
+    }
+}
+
+internal sealed class AdminAuthCheckResponse : BaseResponse
+{
+    [JsonPropertyName("login")] public AdminLoginCheckData result { get; set; }
+
+    internal sealed class AdminLoginCheckData
+    {
+        [JsonPropertyName("uuid")] public string Uuid { get; set; }
+        [JsonPropertyName("admin")] public bool IsAdmin { get; set; }
+    }
 }

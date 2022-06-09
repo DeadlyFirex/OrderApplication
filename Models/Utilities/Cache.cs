@@ -2,8 +2,8 @@ namespace OrderApplication.Models.Utilities;
 
 internal sealed class Cache
 {
-    internal sealed class Authentication
+    internal sealed class Client
     {
-        internal string Token { get; set; }
+        internal Client client { get; set; }
     }
 }
